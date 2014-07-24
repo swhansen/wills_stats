@@ -79,6 +79,7 @@ def  stats_for_shakespear
   #
   # Generate HTML table
   #
+
 grouped = final_stats_ary.group_by{|t| t[0]}.values
 table_head = %Q{<table id="jceasar_stats" } + %Q{class="display">}  +  "\n"  + "<thead>"+ "\n"
 header = "<tr><th>Persona</th> <th>Lines Spoken</th> <th>Longest Speech </th> <th>Scenes In</th><th>Percent Scenes In</th> </tr>"
