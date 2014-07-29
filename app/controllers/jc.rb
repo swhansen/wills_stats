@@ -73,13 +73,11 @@ def  stats_for_shakespear
     # The final array
 
     stats_ary = ["#{speaker}",  "#{total_lines_for_persona}", "#{longest_speech_for_persona}","#{number_of_scenes_for_persona}", "#{percent_of_scenes_for_persona}" ]
-
     final_stats_ary.push(stats_ary)
   end
   #
   # Generate HTML table
   #
-
 grouped = final_stats_ary.group_by{|t| t[0]}.values
 table_head = %Q{<table id="jceasar_stats" } + %Q{class="display">}  +  "\n"  + "<thead>"+ "\n"
 header = "<tr><th>Persona</th> <th>Lines Spoken</th> <th>Longest Speech </th> <th>Scenes In</th><th>Percent Scenes In</th> </tr>"
@@ -95,6 +93,7 @@ table = grouped.map do |portion|
 end.join("\n")
 puts table
 puts "</table>"
+
 end
 
 stats_for_shakespear
